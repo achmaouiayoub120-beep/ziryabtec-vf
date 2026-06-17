@@ -24,15 +24,12 @@ export const styles = StyleSheet.create({
   },
   titleDisplay: {
     fontFamily: FONTS.display,
-    fontWeight: "bold",
   },
   textBody: {
     fontFamily: FONTS.body,
-    fontWeight: "normal",
   },
   textMono: {
     fontFamily: FONTS.mono,
-    fontWeight: "normal",
   },
   goldLine: {
     height: 1,
@@ -58,8 +55,7 @@ export const styles = StyleSheet.create({
     paddingVertical: 4,
     borderRadius: 12,
     fontSize: 8,
-    fontFamily: FONTS.body,
-    fontWeight: "bold",
+    fontFamily: FONTS.bodyBold,
     textTransform: "uppercase",
   },
   footer: {

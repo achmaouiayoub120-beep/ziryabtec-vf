@@ -1,8 +1,9 @@
 import { Font } from "@react-pdf/renderer";
 
 export const FONTS = {
-  display: "Helvetica",
+  display: "Helvetica-Bold",
   body: "Helvetica",
+  bodyBold: "Helvetica-Bold",
   mono: "Courier",
 };
 

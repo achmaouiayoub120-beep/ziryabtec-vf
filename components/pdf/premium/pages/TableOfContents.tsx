@@ -28,7 +28,7 @@ export const TableOfContents = ({ sections }: { sections: { title: string; page:
           {!sec.color && (
             <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: COLORS.text.mutedDark, marginRight: 15 }} />
           )}
-          <Text style={[styles.textBody, { fontSize: 12, color: COLORS.text.primaryDark, fontWeight: 'normal' }]}>
+          <Text style={[styles.textBody, { fontSize: 12, color: COLORS.text.primaryDark }]}>
             {sec.title}
           </Text>
           <View style={{ flex: 1, borderBottomWidth: 1, borderBottomColor: COLORS.border.dark, borderBottomStyle: 'dotted', marginHorizontal: 15, position: 'relative', top: 4 }} />

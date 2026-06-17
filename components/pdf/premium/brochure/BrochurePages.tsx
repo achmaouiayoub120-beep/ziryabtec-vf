@@ -29,7 +29,7 @@ export const BrochureCover = ({ course }: { course: Course }) => {
       <View style={{ flex: 1, justifyContent: 'center', zIndex: 1, paddingHorizontal: 20 }}>
         <View style={{ flexDirection: 'row', marginBottom: 20 }}>
           <View style={{ backgroundColor: color, paddingHorizontal: 10, paddingVertical: 4, borderRadius: 12, marginRight: 10 }}>
-            <Text style={[styles.textBody, { fontSize: 10, color: COLORS.text.primaryDark, fontWeight: 'bold', textTransform: 'uppercase' }]}>
+            <Text style={[styles.textBody, { fontSize: 10, color: COLORS.text.primaryDark, fontFamily: FONTS.bodyBold, textTransform: 'uppercase' }]}>
               {course.fr.category}
             </Text>
           </View>

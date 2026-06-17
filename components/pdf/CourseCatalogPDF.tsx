@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 24,
-    fontWeight: "bold",
+    fontFamily: FONTS.bodyBold,
     color: "#111111",
     marginBottom: 4,
   },
@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   },
   courseTitle: {
     fontSize: 14,
-    fontWeight: "bold",
     color: "#1A56DB",
   },
   courseCategory: {
