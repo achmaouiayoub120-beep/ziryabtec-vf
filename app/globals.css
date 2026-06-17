@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════
+   ZIRYABTEC 2.0 — DESIGN SYSTEM "ELITE CLARITY"
+   ═══════════════════════════════════════════════════════ */
+
+:root {
+  /* ── Backgrounds ─────────────────────────────────── */
+  --bg:             #F8F7F4;
+  --bg-alt:         #F2EFE9;
+  --white:          #FFFFFF;
+
+  /* ── Accents ─────────────────────────────────────── */
+  --accent:         #1A56DB;
+  --accent-hover:   #1344B8;
+  --accent-light:   #EBF2FF;
+  --gold:           #D4A843;
+  --success:        #16A34A;
+  
+  /* ── Texte ───────────────────────────────────────── */
+  --text-primary:   #111111;
+  --text-secondary: #555550;
+  --text-muted:     #999990;
+
+  /* ── Borders & Shadows ───────────────────────────── */
+  --border:         #E8E4DC;
+  --border-hover:   #C8C4BC;
+  --card-shadow:    0 2px 16px rgba(0,0,0,0.06);
+  --card-shadow-hover: 0 12px 40px rgba(0,0,0,0.12);
+
+  /* ── Typography Scale ────────────────────────────── */
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   1.875rem;
+  --text-4xl:   2.25rem;
+
+  /* ── Radius ──────────────────────────────────────── */
+  --radius-sm:  6px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+}
+
+/* ── Tailwind v4 theme tokens ─────────────────────── */
+@theme inline {
+  --color-background: var(--bg);
+  --color-foreground: var(--text-primary);
+  --color-surface:    var(--white);
+  --color-elevated:   var(--bg-alt);
+  --color-border:     var(--border);
+
+  --color-accent:     var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-light: var(--accent-light);
+  --color-gold:       var(--gold);
+  --color-success:    var(--success);
+
+  --color-muted:      var(--text-muted);
+  --color-secondary:  var(--text-secondary);
+
+  --font-display: var(--font-jakarta);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+/* ── Base Styles ──────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display), system-ui, sans-serif;
+}
+
+/* ── Selection ────────────────────────────────────── */
+::selection {
+  background: rgba(26, 86, 219, 0.2);
+  color: var(--text-primary);
+}
+
+/* ── Focus Visible (A11Y) ────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(26, 86, 219, 0.15);
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-md);
+}
+
+/* ── Custom Utilities ─────────────────────────────── */
+.elite-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  box-shadow: var(--card-shadow);
+  border-radius: var(--radius-lg);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.elite-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--border-hover);
+}
+
+/* ── Animations ───────────────────────────────────── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 25%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ── Reduced Motion ───────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
