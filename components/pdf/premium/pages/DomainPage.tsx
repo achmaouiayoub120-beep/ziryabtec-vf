@@ -20,10 +20,10 @@ export const DomainPage = ({ domain, color, formations }: { domain: string; colo
     <View style={{ padding: 40 }}>
       {/* Table Header */}
       <View style={{ flexDirection: 'row', borderBottomWidth: 2, borderBottomColor: color, paddingBottom: 10, marginBottom: 15 }}>
-        <Text style={[styles.textBody, { width: '15%', fontSize: 10, fontWeight: 600, color: COLORS.text.secondary }]}>RÉF</Text>
-        <Text style={[styles.textBody, { width: '55%', fontSize: 10, fontWeight: 600, color: COLORS.text.secondary }]}>FORMATION</Text>
-        <Text style={[styles.textBody, { width: '15%', fontSize: 10, fontWeight: 600, color: COLORS.text.secondary }]}>CATÉGORIE</Text>
-        <Text style={[styles.textBody, { width: '15%', fontSize: 10, fontWeight: 600, color: COLORS.text.secondary, textAlign: 'right' }]}>DURÉE</Text>
+        <Text style={[styles.textBody, { width: '15%', fontSize: 10, fontWeight: 'bold', color: COLORS.text.secondary }]}>RÉF</Text>
+        <Text style={[styles.textBody, { width: '55%', fontSize: 10, fontWeight: 'bold', color: COLORS.text.secondary }]}>FORMATION</Text>
+        <Text style={[styles.textBody, { width: '15%', fontSize: 10, fontWeight: 'bold', color: COLORS.text.secondary }]}>CATÉGORIE</Text>
+        <Text style={[styles.textBody, { width: '15%', fontSize: 10, fontWeight: 'bold', color: COLORS.text.secondary, textAlign: 'right' }]}>DURÉE</Text>
       </View>
 
       {/* Table Rows */}

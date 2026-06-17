@@ -15,7 +15,7 @@ export const FormationListPage = ({ formations }: { formations: Formation[] }) =
               <Text style={[styles.textMono, { fontSize: 8, color: COLORS.text.secondary }]}>{f.reference}</Text>
             </View>
             <View style={{ backgroundColor: 'rgba(6, 182, 212, 0.1)', paddingHorizontal: 6, paddingVertical: 3, borderRadius: 4 }}>
-              <Text style={[styles.textBody, { fontSize: 8, color: COLORS.accent.cyan, fontWeight: 600, textTransform: 'uppercase' }]}>{f.categorie}</Text>
+              <Text style={[styles.textBody, { fontSize: 8, color: COLORS.accent.cyan, fontWeight: 'bold', textTransform: 'uppercase' }]}>{f.categorie}</Text>
             </View>
           </View>
 
@@ -24,7 +24,7 @@ export const FormationListPage = ({ formations }: { formations: Formation[] }) =
           </Text>
 
           <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 15, paddingBottom: 15, borderBottomWidth: 1, borderBottomColor: COLORS.border.light }}>
-            <Text style={[styles.textBody, { fontSize: 9, color: COLORS.text.secondary, fontWeight: 600 }]}>
+            <Text style={[styles.textBody, { fontSize: 9, color: COLORS.text.secondary, fontWeight: 'bold' }]}>
               DURÉE: {f.duree}
             </Text>
           </View>
